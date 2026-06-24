@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-//service section
+//Project Section section
 function toggleProject(id) {
 
     document.querySelectorAll('.project-details')
@@ -30,7 +30,25 @@ function toggleProject(id) {
 
         });
 
-    document.getElementById(id).style.display = 'block';
+    const selected = document.getElementById(id);
+
+    if (selected) {
+
+        selected.style.display = 'block';
+
+        const navbarHeight = 100;
+
+        const y =
+            selected.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarHeight;
+
+        window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+        });
+
+    }
 }
 
 //service section
@@ -89,7 +107,14 @@ function showService(serviceId) {
     const selected = document.getElementById(serviceId);
 
     if (selected) {
+
         selected.classList.add("active");
+
+        selected.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
     }
 }
 
