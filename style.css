@@ -107,19 +107,147 @@ body {
     margin-top: 50px;
 }
 
+/* Service Card Styling */
+
 .card {
+    position: relative;
+    overflow: hidden;
+
     background: white;
     padding: 35px;
     border-radius: 20px;
     color: black;
-    transition: all .4s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
     cursor: pointer;
+
+    transition: .4s ease;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 
 .card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+}
+
+.card::before {
+    content: "Click to View Service in detail";
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, .65);
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+
+
+/* Auto attention animation */
+
+.gallery-item.attention,
+.card.attention {
+    animation: tiltAttention 1.5s ease-in-out 2;
+}
+
+@keyframes tiltAttention {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(-4deg) scale(1.03);
+    }
+
+    50% {
+        transform: rotate(4deg) scale(1.03);
+    }
+
+    75% {
+        transform: rotate(-2deg) scale(1.03);
+    }
+}
+
+/* Auto show overlay */
+
+.card::before {
+    content: "Click to View Service in detail";
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, .65);
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    opacity: 0;
+    transition: .4s;
+}
+
+.card.show-overlay::before {
+    opacity: 1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+
+/* Project attention animation */
+
+.gallery-item.attention,
+.card.attention {
+    transform-origin: top center;
+    animation: swingAttention 1.5s ease-in-out 2;
+}
+
+@keyframes swingAttention {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(8deg);
+    }
+
+    40% {
+        transform: rotate(-8deg);
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Auto overlay */
+
+.gallery-item.show-overlay::before {
+    opacity: 1;
 }
 
 .gallery {
@@ -247,7 +375,7 @@ footer {
 }
 
 .gallery-item::before {
-    content: 'View Project';
+    content: 'Click to View Projects in detail';
     position: absolute;
     inset: 0;
     display: flex;
@@ -330,14 +458,6 @@ footer {
     line-height: 1.8;
 }
 
-
-@media(max-width:768px) {
-
-    .project-content {
-        flex-direction: column;
-    }
-
-}
 
 
 .comparison-section {
@@ -459,14 +579,6 @@ footer {
     margin-bottom: 15px;
 }
 
-@media(max-width:768px) {
-
-    .about-content {
-        flex-direction: column;
-    }
-
-}
-
 
 .quote-modal {
     display: none;
@@ -546,18 +658,9 @@ footer {
     line-height: 1.8;
 }
 
-@media(max-width:768px) {
-
-    .service-project,
-    .service-project.reverse {
-        flex-direction: column;
-    }
-
-    .service-project img,
-    .service-project-text {
-        width: 100%;
-    }
-
+.service-project img,
+.service-project-text {
+    width: 100%;
 }
 
 .service-section {
@@ -740,8 +843,6 @@ footer {
     display: block;
 }
 
-
-/*Contact form below */
 /* CONTACT SECTION */
 
 #contact {
@@ -1440,7 +1541,6 @@ footer a:hover {
 
     .navbar {
         display: flex;
-        flex-direction: column;
 
         justify-content: center;
         align-items: center;
@@ -1451,6 +1551,8 @@ footer a:hover {
 
         position: relative;
     }
+
+
 
     .logo img {
         width: 180px;
@@ -1555,10 +1657,6 @@ footer a:hover {
 
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
     /* NAVBAR */
 
     .navbar {
@@ -1567,18 +1665,14 @@ footer a:hover {
         left: 0;
 
         width: 100%;
+        padding: 12px 15px;
 
         display: flex;
         flex-direction: column;
-
-        justify-content: center;
         align-items: center;
+        gap: 10px;
 
-        gap: 12px;
-
-        padding: 15px;
-
-        background: rgba(255, 255, 255, .98);
+        background: rgba(255, 255, 255, .97);
         backdrop-filter: blur(10px);
 
         z-index: 9999;
@@ -1590,33 +1684,25 @@ footer a:hover {
     }
 
     .nav-links {
-        width: 100%;
-
         display: flex;
         flex-wrap: wrap;
 
+
         justify-content: center;
-        align-items: center;
+        gap: 10px 18px;
 
-        gap: 10px 20px;
-
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-links li {
-        list-style: none;
+        width: 100%;
     }
 
     .nav-links a {
-        font-size: .95rem;
-        font-weight: 600;
+        font-size: .9rem;
     }
 
     .navbar .btn {
-        width: 220px;
-        text-align: center;
+        width: 200px;
+        padding: 12px;
     }
+
 
     /* HERO */
 
@@ -1625,56 +1711,91 @@ footer a:hover {
     }
 
     .hero-overlay {
-        padding-top: 260px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 60px;
+
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding:
+            180px 20px 40px;
 
         text-align: center;
     }
 
     .hero-content {
+        width: 100%;
         max-width: 100%;
     }
 
     .hero-content h1 {
+
         font-size: 2.3rem;
         line-height: 1.15;
-        letter-spacing: 0;
-    }
 
-    .hero-content p {
-        font-size: 1rem;
-        line-height: 1.8;
+        margin-bottom: 20px;
     }
 
     .hero-line {
-        margin: 20px auto;
+        margin: 0 auto 20px;
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+        line-height: 1.7;
+
+        margin-bottom: 30px;
     }
 
     .hero-features {
+
+        display: flex;
         flex-direction: column;
+
+        gap: 15px;
+
+        margin-bottom: 30px;
     }
 
     .feature {
-        width: 100%;
+
         min-width: 100%;
+        padding: 16px;
+
+        text-align: left;
+    }
+
+    .feature i {
+        font-size: 1.5rem;
+    }
+
+    .feature h3 {
+        font-size: 1rem;
+    }
+
+    .feature p {
+        font-size: .85rem;
     }
 
     .hero .btn {
+
         width: 100%;
-        max-width: 320px;
+        max-width: 280px;
+
+        padding: 15px;
     }
+}
+
+/* ABOUT */
+
+@media (max-width:768px) {
 
     /* ABOUT */
 
     .about-content {
         flex-direction: column;
-    }
-
-    .about-image,
-    .about-text {
-        width: 100%;
     }
 
     /* SERVICES */
@@ -1733,9 +1854,254 @@ footer a:hover {
         width: 60px;
         height: 60px;
         font-size: 30px;
-
         left: 15px;
         bottom: 20px;
+    }
+
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Mobile only */
+@media (max-width:768px) {
+
+    .logo {
+        transition: opacity .3s ease,
+            transform .3s ease;
+    }
+
+    .logo.hide-logo {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .navbar {
+        transition: all .3s ease;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column;
+    }
+
+}
+
+
+/* Permanent green glow */
+
+.card.attention-finished,
+.gallery-item.attention-finished {
+    border: 2px solid #758a00;
+
+    box-shadow:
+        0 0 10px rgba(117, 138, 0, 0.4),
+        0 0 25px rgba(117, 138, 0, 0.3),
+        0 0 40px rgba(117, 138, 0, 0.15);
+
+    animation: greenGlow 2s ease-in-out infinite;
+}
+
+@keyframes greenGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 10px rgba(117, 138, 0, 0.3),
+            0 0 20px rgba(117, 138, 0, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgba(117, 138, 0, 0.6),
+            0 0 40px rgba(117, 138, 0, 0.4);
+    }
+}
+
+
+/* CSS after chnages */
+
+.support-list {
+    margin-top: 18px;
+    padding-left: 22px;
+    text-align: left;
+    color: #555;
+    line-height: 1.8;
+}
+
+.support-list li {
+    margin-bottom: 8px;
+}
+
+.stat-card h3 {
+    color: #d4af37;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-overlay>.btn {
+    margin-top: 30px;
+}
+
+
+#construction {
+    background: #0f172a;
+    color: white;
+
+    padding: 60px 8%;
+    margin-top: 40px;
+}
+
+#construction h3 {
+    color: #d4af37;
+}
+
+#construction p {
+    color: #ddd;
+}
+
+#construction .service-image img {
+    border-radius: 20px;
+}
+
+
+@media (max-width:768px) {
+
+    .navbar {
+        transition: all .3s ease;
+    }
+
+    .logo,
+    .navbar .btn {
+        transition: opacity .3s ease,
+            transform .3s ease;
+    }
+
+}
+
+
+
+@media (max-width:768px) {
+
+    .navbar {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .nav-links {
+
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE NAVBAR IMPROVEMENT
+========================================= */
+
+@media (max-width:768px) {
+
+    /* Give more space at the top */
+    .navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: all .35s ease;
+    }
+
+    /* Bigger logo spacing */
+    .logo {
+        margin-bottom: 15px;
+        transition: all .35s ease;
+    }
+
+    /* Quote button spacing */
+    .navbar .btn {
+        margin-top: 15px;
+        transition: all .35s ease;
+    }
+
+    /* Hero starts below navbar */
+    .hero {
+        padding-top: 180px;
+    }
+
+}
+
+
+@media (max-width:768px) {
+
+    .navbar {
+        transition: all .3s ease;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .navbar .btn {
+        margin-top: 15px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .navbar {
+        transition: all .35s ease;
+    }
+
+    .logo,
+    .navbar .btn {
+        transition: all .35s ease;
+    }
+
+    .navbar.hide-logo {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .navbar.hide-logo .logo,
+    .navbar.hide-logo .btn {
+
+        display: none;
+
     }
 
 }

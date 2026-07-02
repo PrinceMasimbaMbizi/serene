@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>Serene Mining & Maintenance Services</title>
 
     <link rel="stylesheet" href="style.css">
@@ -15,15 +15,11 @@
         rel="stylesheet">
 </head>
 
+
+
 <body>
 
-    <div id="loader">
-        <div class="loader-content">
-            <img src="images/logo.png" alt="Serene Logo">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
-    </div>
+
 
     <header>
         <nav class="navbar">
@@ -35,7 +31,6 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
@@ -44,6 +39,7 @@
             </button>
         </nav>
     </header>
+    <br>
 
     <section id="home" class="hero">
 
@@ -52,8 +48,7 @@
             <div class="hero-content">
 
                 <h1>
-                    Reliable Mining<br>
-                    Maintenance Services
+                    Reliable Maintenance Services <br> for the Mining Industry
                 </h1>
 
                 <div class="hero-line"></div>
@@ -81,21 +76,19 @@
                         </div>
                     </div>
 
-                    <div class="feature">
-                        <i class="fas fa-shield-halved"></i>
-                        <div>
-                            <h3>Proven Capability</h3>
-                            <p>Skilled teams. Quality outcomes.</p>
-                        </div>
+                    <div>
+                        <h3>Skilled Team</h3>
+                        <p>Led by experienced management.</p>
                     </div>
-
                 </div>
 
-                <a href="#services" class="btn">
-                    Explore Services
-                </a>
-
             </div>
+
+            <a href="#services" class="btn">
+                Explore Services
+            </a>
+
+        </div>
 
         </div>
 
@@ -122,15 +115,15 @@
             <p>Our fitters are fully equipped with the right tools vehicles and are only a phone call away.</p>
 
             <p>
-                Serene Mining & Maintenance Services provides professional
-                mining support, mobile equipment servicing, shutdown support,
-                plant maintenance and infrastructure solutions.
+                Serene Mining & Maintenance Services provides specialist maintenance, shutdown, fabrication, and project
+                support services to the mining industry. We focus on maintaining and supporting crushing and screening
+                plants, mobile equipment, and mining infrastructure
             </p>
 
             <p>
-                Our experienced team is committed to delivering safe,
-                efficient, and reliable solutions that maximize operational
-                performance while maintaining the highest industry standards.
+                Our experienced team is committed to delivering safe, efficient, and reliable solutions through
+                practical industry experience, quality workmanship, and a strong commitment to safety and
+                professionalism.
             </p>
 
         </div>
@@ -141,18 +134,22 @@
 
 
         <div class="stat-card">
-            <h3 class="counter" data-target="15">0</h3>
-            <p>Years Experience</p>
+            <h3>Maintenance Services</h3>
+
+            <ul class="support-list">
+                <li>Project Support</li>
+                <li>Shutdown Support</li>
+            </ul>
         </div>
 
         <div class="stat-card">
-            <h3 class="counter" data-target="200">0</h3>
-            <p>Projects Completed</p>
+            <h3>Project Delivery</h3>
+            <p>Successfully supporting maintenance, shutdowns, and site projects from start to finish.</p>
         </div>
 
         <div class="stat-card">
-            <h3 class="counter" data-target="100">0</h3>
-            <p>Client Satisfaction</p>
+            <h3>Client Satisfaction</h3>
+            <p>Building lasting relationships through reliable service, quality workmanship, and trust.</p>
         </div>
 
     </div>
@@ -173,30 +170,34 @@
         <div class="why-grid">
 
             <div class="why-card">
-                <h3>Experienced Team</h3>
+                <h3>Experienced Professionals</h3>
                 <p>
-                    Skilled professionals with extensive mining and maintenance experience.
+                    Qualified tradespeople and experienced management delivering reliable maintenance and project
+                    support across the mining industry.
                 </p>
             </div>
 
             <div class="why-card">
-                <h3>Safety First</h3>
+                <h3>Our Culture</h3>
                 <p>
-                    We maintain strict safety standards on every project.
+                    We foster a culture of safety, accountability, teamwork, and quality—ensuring every task is
+                    completed with care and professionalism.
                 </p>
             </div>
 
             <div class="why-card">
-                <h3>Reliable Service</h3>
+                <h3>Reliable Project Support</h3>
                 <p>
-                    Delivering quality workmanship on time and within budget.
+                    Providing responsive maintenance, shutdown, and project support to help keep operations running
+                    safely and efficiently.
                 </p>
             </div>
 
             <div class="why-card">
-                <h3>Industry Expertise</h3>
+                <h3>Solutions That We Deliver</h3>
                 <p>
-                    Specialized knowledge in mining operations and equipment maintenance.
+                    Practical maintenance solutions focused on reliability, quality workmanship, and long-term
+                    operational performance.
                 </p>
             </div>
 
@@ -216,7 +217,9 @@
 
             <div class="card" onclick="showService('mining')">
                 <h3 style="color: #758a00;">Maintenance Services</h3>
-                <p>Specialised maintenance solutions that maximise equipment reliability and operational performance.
+                <p>
+                    Specialised expertise in crushing and screening plants, plant maintenance, equipment installation,
+                    and mobile mining equipment support.
                 </p>
             </div>
 
@@ -228,6 +231,13 @@
 
             <div class="card" onclick="showService('mobile')">
                 <h3 style="color: #758a00;">Operational Support</h3>
+                <p>We supply experienced operators and provide operational including maintenance from management support
+                    for safe and efficient plant operations.
+                </p>
+            </div>
+
+            <div class="card" onclick="showService('construction')">
+                <h3 style="color: #758a00;">Construction & Setup</h3>
                 <p>Responsive field services and skilled personnel to keep your operation moving safely and efficiently.
                 </p>
             </div>
@@ -236,6 +246,9 @@
 
 
         <!-- maintenance services -->
+
+
+
 
         <div id="mining" class="service-section">
 
@@ -246,9 +259,11 @@
                 </div>
 
                 <div class="service-description">
-                    <h3>Crusher Maintenance</h3>
-                    <p>Regular inspection, servicing, and maintenance of crushing equipment to maximise performance,
-                        improve reliability, and minimise unplanned downtime.</p>
+                    <h3>Crusher maintenance</h3>
+                    <p>
+                        Rebuilds, relining, and general maintenance of cone and jaw crushers to improve equipment
+                        reliability, maximise performance, and reduce unplanned downtime.
+                    </p>
                 </div>
 
             </div>
@@ -256,13 +271,15 @@
             <div class="service-row reverse">
 
                 <div class="service-image">
-                    <img src="images/project2.jpeg">
+                    <img src="images/better.png">
                 </div>
 
                 <div class="service-description">
-                    <h3>Cone Crusher Rebuilds & Relining</h3>
-                    <p>Complete cone crusher rebuilds, relining, and component replacement services designed to restore
-                        performance and extend equipment life.</p>
+                    <h3>Conveyor belts</h3>
+                    <p>
+                        Changing conveyor belts, bearings, rollers, and drive units, together with general conveyor
+                        maintenance to ensure reliable performance and minimise downtime.
+                    </p>
                 </div>
 
             </div>
@@ -276,8 +293,8 @@
 
                 <div class="service-description">
                     <h3>Hydraulic Repairs</h3>
-                    <p>Expert diagnosis and repair of hydraulic systems, including hoses, cylinders, pumps, and valves,
-                        with a strong focus on safety and environmental responsibility.</p>
+                    <p>Troubleshooting, general maintenance, and hydraulic component change-outs to ensure reliable
+                        performance and minimise equipment downtime.</p>
                 </div>
 
             </div>
@@ -286,16 +303,50 @@
             <div class="service-row reverse">
 
                 <div class="service-image">
-                    <img src="images/crusher4.jpg">
+                    <img src="images/car2.png">
                 </div>
 
                 <div class="service-description">
-                    <h3>Breakdown Response & Field Service Support</h3>
-                    <p>Rapid-response maintenance teams available to diagnose faults, perform repairs, and return
-                        critical equipment to operation as quickly as possible. </p>
+                    <h3>Breakdown Support.</h3>
+                    <p>We are on standby 24/7 to provide rapid breakdown support, helping minimise downtime and restore
+                        equipment to operation as quickly as possible.</p>
                 </div>
 
             </div>
+
+
+            <div class="service-row reverse">
+
+                <div class="service-image">
+                    <img src="images/serene5.jpeg">
+                </div>
+
+                <div class="service-description">
+                    <h3>Screen Maintenance</h3>
+                    <p>Screen media change-outs, screen rebuilds, and general maintenance to maximise screening
+                        performance and extend equipment service life.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="service-row reverse">
+
+                <div class="service-image">
+                    <img src="images/pic1.jpg">
+                </div>
+
+                <div class="service-description">
+                    <h3>Mobile Plant & Equipment Maintenance</h3>
+                    <p>General maintenance, servicing, inspections, and repairs of mobile plant and equipment to
+                        maximise reliability and minimise operational downtime.
+                    </p>
+                </div>
+
+            </div>
+
+
         </div>
 
         <!-- Infrastructure Installation -->
@@ -305,7 +356,7 @@
             <div class="service-row">
 
                 <div class="service-image">
-                    <img src="images/serene4.jpeg">
+                    <img src="images/serene3.jpeg">
                 </div>
 
                 <div class="service-description">
@@ -319,7 +370,7 @@
             <div class="service-row reverse">
 
                 <div class="service-image">
-                    <img src="images/Installation2.jpg">
+                    <img src="images/serene4.jpeg">
                 </div>
 
                 <div class="service-description">
@@ -331,41 +382,44 @@
             </div>
 
 
-            <div class="service-row">
-
-                <div class="service-image">
-                    <img src="images/mobile.jpeg">
-                </div>
-
-                <div class="service-description">
-                    <h3>Mobile Sandblasting</h3>
-                    <p>On-site sandblasting services for surface preparation, corrosion removal, and asset restoration
-                        across a wide range of mining equipment.</p>
-                </div>
-
-            </div>
-
-
             <div class="service-row reverse">
 
                 <div class="service-image">
-                    <img src="images/structural1.png">
+                    <img src="images/fabrication.jpeg">
                 </div>
 
                 <div class="service-description">
                     <h3>Structural Steel Fabrication</h3>
-                    <p>Fabrication, repair, and modification of structural steel components to support safe, reliable,
-                        and efficient site operations.</p>
+                    <p>Fabrication and installation of structural steel, including safe access ladders, work platforms,
+                        and other steel structures to support crushing and screening operations.</p>
                 </div>
 
             </div>
 
 
+            <div class="service-row">
 
-            <!-- Mobile Servicing -->
+                <div class="service-image">
+                    <img src="images/one.png">
+                </div>
 
+                <div class="service-description">
+                    <h3>Mobile Sandblasting</h3>
+                    <p>On-site mobile sandblasting services for surface preparation, corrosion removal, and equipment
+                        restoration to extend the life of plant and equipment.</p>
+                </div>
+
+            </div>
 
         </div>
+
+
+
+
+        <!-- Operational Support -->
+
+
+
 
         <div id="mobile" class="service-section">
 
@@ -376,9 +430,9 @@
                 </div>
 
                 <div class="service-description">
-                    <h3>Plant & Equipment Mobilisation</h3>
-                    <p>Careful planning and execution of plant and equipment mobilisation projects to ensure safe,
-                        efficient transport and site integration.</p>
+                    <h3>Skilled Fitters, Boilermakers & Riggers</h3>
+                    <p>Qualified fitters, boilermakers, and riggers available to support maintenance, shutdowns,
+                        projects, and day-to-day operational requirements across the mining industry.</p>
                 </div>
 
             </div>
@@ -386,13 +440,13 @@
             <div class="service-row reverse">
 
                 <div class="service-image">
-                    <img src="images/car2.png">
+                    <img src="images/shutdown.png">
                 </div>
 
                 <div class="service-description">
-                    <h3>Breakdown Support</h3>
-                    <p>Fast and reliable field support services focused on reducing downtime and restoring production
-                        with minimal disruption.</p>
+                    <h3>Shutdown Support</h3>
+                    <p>Providing skilled personnel and maintenance support during planned shutdowns to ensure safe,
+                        efficient, and timely project completion.</p>
                 </div>
 
             </div>
@@ -401,13 +455,13 @@
             <div class="service-row">
 
                 <div class="service-image">
-                    <img src="images/serene8.jpeg">
+                    <img src="images/sandd.jpeg">
                 </div>
 
                 <div class="service-description">
-                    <h3>Skilled Fitters, Boilermakers & Riggers</h3>
-                    <p>Experienced tradespeople available for shutdowns, maintenance projects, installations, and
-                        ongoing site support requirements.</p>
+                    <h3>Project Support</h3>
+                    <p>Providing skilled personnel and maintenance support for projects of all sizes, ensuring safe,
+                        efficient, and successful project delivery.</p>
                 </div>
 
             </div>
@@ -420,9 +474,9 @@
                 </div>
 
                 <div class="service-description">
-                    <h3>Field Repairs</h3>
-                    <p>Fully equipped mobile service teams capable of carrying out on-site repairs, inspections, and
-                        maintenance wherever your operation is located.</p>
+                    <h3>Labour Hire</h3>
+                    <p>Supplying qualified and experienced personnel to support maintenance, shutdowns, projects, and
+                        ongoing operational requirements.</p>
                 </div>
 
             </div>
@@ -435,138 +489,61 @@
 </section>
 
 
-<!-- Project Menu -->
-<section id="projects" class="section">
 
-    <div class="container">
 
-        <h2>Comprehensive Solutions. Proven Results</h2>
+<!-- Construction & Setup -->
 
-        <div class="gallery">
 
-            <div class="gallery-item" onclick="toggleProject('project1')">
-                Project Highlight 1
-            </div>
+<div id="construction" class="service-section">
 
-            <div class="gallery-item" onclick="toggleProject('project2')">
-                Project Highlight 2
-            </div>
+    <div class="service-row">
 
-            <div class="gallery-item" onclick="toggleProject('project3')">
-                Project Highlight 3
-            </div>
-
+        <div class="service-image">
+            <img src="images/serene8.jpeg">
         </div>
 
-        <!-- Project 1 Details -->
-        <div id="project1" class="project-details">
-
-            <h3>Feeder Relining Project</h3>
-
-            <p>
-                Severe wear within the feeder was impacting operational efficiency and increasing the risk of unplanned
-                downtime. Our team fabricated and installed custom wear plates and liner systems designed to withstand
-                the demanding conditions of the mining environment.
+        <div class="service-description">
+            <h3>Plant & Equipment Mobilisation</h3>
+            <p>Safe and efficient mobilisation of plant and equipment to project sites, ensuring a smooth transition
+                from transport to installation and operation.
             </p>
-
-            <div class="comparison-section">
-
-                <div class="comparison-group">
-
-                    <h4>Before</h4>
-
-                    <div class="comparison-images">
-
-                        <img src="images/serene2.jpeg">
-                        <img src="images/serene3.jpeg">
-
-                    </div>
-
-                </div>
-
-                <div class="comparison-group">
-
-                    <h4>After</h4>
-
-                    <div class="comparison-images">
-
-                        <img src="images/serene4.jpeg">
-                        <img src="images/serene5.jpeg">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- Project 2 Details -->
-        <div id="project2" class="project-details">
-            <h3>Cone Crusher Rebuilds & Maintenance Experts</h3>
-
-            <p>
-                Cone crusher rebuilds, relining and general maintenance, Serene is your go to partner
             </p>
-
-            <div class="comparison-section">
-
-                <div class="comparison-group">
-
-                    <h4></h4>
-
-                    <div class="comparison-images">
-
-                        <img src="images/project2.jpeg">
-                        <img src="images/project22.jpeg">
-
-                    </div>
-
-                </div>
-
-                <div class="comparison-group">
-
-
-                </div>
-
-            </div>
-        </div>
-
-
-        <!-- Project 3 Details -->
-        <div id="project3" class="project-details">
-            <h3>Hydraulic System Repairs & Leak Prevention</h3>
-
-            <p>
-                We efficiently diagnose and resolve all hydraulic system issues with precision and care.
-                Our team ensures strict control measures to prevent any oil leakage or environmental contamination.
-                All repairs are carried out in compliance with safety and environmental standards for responsible
-                operations.
-            </p>
-
-            <div class="comparison-section">
-
-                <div class="comparison-group">
-
-                    <h4></h4>
-
-                    <div class="comparison-images">
-
-                        <img src="images/project3.jpeg">
-                        >
-
-                    </div>
-
-                </div>
-
-
-            </div>
         </div>
 
     </div>
 
-</section>
+    <div class="service-row reverse">
+
+        <div class="service-image">
+            <img src="images/serene8.jpeg">
+        </div>
+
+        <div class="service-description">
+            <h3>Crushing & Screening Plants Setup</h3>
+            <p>Installation and setup of crushing and screening plants, ensuring equipment is safely assembled, aligned,
+                and ready for reliable operation.</p>
+        </div>
+
+    </div>
+
+
+    <div class="service-row">
+
+        <div class="service-image">
+            <img src="images/dome.jpeg">
+        </div>
+
+        <div class="service-description">
+            <h3>Infrastructure Installations including workshops and domes.</h3>
+            <p>Installation of workshops, domes, and supporting infrastructure to meet the operational requirements of
+                crushing and screening plants.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
 
 
 <div id="quoteModal" class="quote-modal">
@@ -639,9 +616,8 @@
                 <h3>Serene Mining & Maintenance Services</h3>
 
                 <p>
-                    We provide reliable mining maintenance,
-                    field repairs, breakdown support and
-                    infrastructure installation services across Australia.
+                    WWe provide reliable maintenance, shutdown support, field repairs, fabrication, and project services
+                    for the mining industry across Australia.
                 </p>
 
                 <div class="info-item">

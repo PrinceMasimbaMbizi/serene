@@ -118,3 +118,133 @@ function showService(serviceId) {
     }
 }
 
+//Automatically show the view more in detail part 
+
+const servicesSection =
+    document.querySelector("#services");
+
+const serviceCards =
+    document.querySelectorAll(".card");
+
+const observer =
+    new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                serviceCards.forEach(card => {
+
+                    card.classList.add("attention");
+                    card.classList.add("show-overlay");
+
+                });
+
+                setTimeout(() => {
+
+                    serviceCards.forEach(card => {
+
+                        card.classList.remove("show-overlay");
+
+                    });
+
+                }, 3000);
+
+                observer.unobserve(entry.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.4
+    });
+
+observer.observe(servicesSection);
+
+// for project 
+
+
+const projectsSection =
+    document.querySelector("#projects");
+
+const projectCards =
+    document.querySelectorAll(".gallery-item");
+
+const projectObserver =
+    new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                projectCards.forEach(card => {
+
+                    card.classList.add("attention");
+                    card.classList.add("show-overlay");
+
+                });
+
+                setTimeout(() => {
+
+                    projectCards.forEach(card => {
+
+                        card.classList.remove("show-overlay");
+
+                    });
+
+                }, 3000);
+
+                projectObserver.unobserve(entry.target);
+            }
+
+        });
+
+    }, {
+        threshold: 0.4
+    });
+
+projectObserver.observe(projectsSection);
+
+
+serviceCards.forEach(card => {
+
+    card.classList.add("attention");
+    card.classList.add("show-overlay");
+
+    setTimeout(() => {
+        card.classList.add("attention-finished");
+    }, 2500);
+
+});
+
+projectCards.forEach(card => {
+
+    card.classList.add("attention");
+    card.classList.add("show-overlay");
+
+    setTimeout(() => {
+        card.classList.add("attention-finished");
+    }, 2500);
+
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.innerWidth <= 768) {
+
+        if (window.scrollY > 60) {
+            navbar.classList.add("hide-logo");
+        } else {
+            navbar.classList.remove("hide-logo");
+        }
+
+    }
+
+});
+
+
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
