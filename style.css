@@ -2105,3 +2105,210 @@ footer a:hover {
     }
 
 }
+
+
+/*Emplyment css*/
+
+
+#employment {
+
+    background: #f8fafc;
+
+}
+
+#employment h2 {
+
+    text-align: center;
+
+    color: var(--heading-color);
+
+    margin-bottom: 20px;
+
+}
+
+.employment-intro {
+
+    max-width: 900px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    color: var(--text-color);
+
+    line-height: 1.8;
+
+}
+
+.employment-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+
+}
+
+.employment-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    transition: .3s;
+
+    border: 1px solid rgba(0, 0, 0, .08);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+.employment-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+
+}
+
+.employment-card i {
+
+    color: #758a00;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+}
+
+.employment-card h3 {
+
+    color: #1f2937;
+
+    margin-bottom: 10px;
+
+}
+
+.employment-benefits {
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(0, 0, 0, .08);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+.employment-benefits h3 {
+
+    color: #758a00;
+
+    margin-bottom: 25px;
+
+}
+
+.employment-benefits li {
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.employment-benefits li:last-child {
+
+    border: none;
+
+}
+
+.employment-benefits li::before {
+
+    content: "✓";
+
+    color: #758a00;
+
+    font-weight: bold;
+
+    margin-right: 10px;
+
+}
+
+/* Apply now button css */
+
+.apply-btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding: 16px 38px;
+
+    background: linear-gradient(135deg, #758a00, #95ad00);
+
+    color: #fff;
+
+    font-weight: 600;
+    font-size: 1rem;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    box-shadow: 0 12px 30px rgba(117, 138, 0, .35);
+
+    transition: all .35s ease;
+
+}
+
+.apply-btn i {
+
+    transition: .35s;
+
+}
+
+.apply-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 40px rgba(117, 138, 0, .45);
+
+    background: linear-gradient(135deg, #869d00, #a9c500);
+
+}
+
+.apply-btn:hover i {
+
+    transform: translateX(5px);
+
+}
+
+.apply-btn:active {
+
+    transform: scale(.97);
+
+}
+
+@media (max-width:768px) {
+
+    .apply-btn {
+
+        width: 100%;
+        padding: 18px;
+
+    }
+
+}
