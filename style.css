@@ -2312,3 +2312,46 @@ footer a:hover {
     }
 
 }
+
+
+.navbar {
+    transition: all .35s ease;
+}
+
+.nav-links,
+.navbar .btn {
+    transition: all .35s ease;
+}
+
+.navbar.compact {
+
+    padding: 12px 8%;
+
+}
+
+.navbar.compact .nav-links,
+.navbar.compact .btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.navbar.compact .logo {
+
+    margin: 0 auto;
+
+}
+
+
+.navbar.compact {
+
+    padding: 10px 8%;
+
+}
+
+.navbar.compact .logo img {
+
+    height: 45px;
+
+}
