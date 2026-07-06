@@ -228,20 +228,21 @@ projectCards.forEach(card => {
 
 });
 
-
 const navbar = document.querySelector(".navbar");
+const logo = document.querySelector(".logo");
 
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 80) {
+    if (window.scrollY > 30) {
+
         navbar.classList.add("compact");
+        logo.classList.add("hide-logo");
+
     } else {
+
         navbar.classList.remove("compact");
+        logo.classList.remove("hide-logo");
+
     }
 
-});
-
-
-window.addEventListener("load", () => {
-    window.scrollTo(0, 0);
 });

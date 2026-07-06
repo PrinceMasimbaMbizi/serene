@@ -1279,19 +1279,16 @@ footer a:hover {
    TABLET
 =========================== */
 
-@media (max-width: 992px) {
+.hero-overlay {
+    min-height: 100vh;
 
-    .hero-overlay {
-        padding-top: 140px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .hero-features {
-        flex-direction: column;
-    }
+    padding: 90px 20px 30px;
 
-    .feature {
-        width: 100%;
-    }
+    text-align: center;
 }
 
 /* ===========================
@@ -2353,5 +2350,68 @@ footer a:hover {
 .navbar.compact .logo img {
 
     height: 45px;
+
+}
+
+
+/* =========================================
+   MOBILE AUTO HIDE NAVBAR
+========================================= */
+
+@media (max-width:768px) {
+
+    .navbar {
+        transition: transform .35s ease;
+    }
+
+    .navbar.hide-navbar {
+        transform: translateY(-100%);
+    }
+
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 8%;
+    /* Was 18px */
+
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+
+    z-index: 9999;
+
+    transition: all .35s ease;
+}
+
+.logo {
+    transition: all .35s ease;
+}
+
+.logo.hide-logo {
+    opacity: 0;
+    transform: scale(0);
+    width: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    transition: all .35s ease;
+}
+
+.navbar.compact {
+
+    padding: 8px 8%;
 
 }
